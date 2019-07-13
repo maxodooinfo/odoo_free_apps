@@ -4,7 +4,7 @@
     'version': '1.0',
     'category': 'Human Resources',
     'sequence': 1,      
-    'summary': 'Manage an attendance for employee',
+    'summary': 'Show attendance details on button hover.',
     'author': 'max',
     'depends': ['hr_attendance'],
     'data': [
@@ -13,8 +13,8 @@
     'qweb': [
         'static/src/xml/attendance.xml',
     ],
-    'installable': True,
-    'auto_install': False,
-    'application': True,
+    "auto_install": False,
+    "installable": True,
+    "images":['static/description/banner.png'],
 }
 

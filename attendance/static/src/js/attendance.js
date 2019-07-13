@@ -23,7 +23,7 @@ QWeb.add_template('/attendance/static/src/xml/attendance.xml');
 var attend_btn = Widget.extend({
 	
 	events: {
-        "click .e_sign_in_out_icon": function() {
+        "click .attendance_btn_li": function() {
         	var self = this;
         	this.delay_button();
         	setTimeout(function() {
@@ -51,6 +51,7 @@ var attend_btn = Widget.extend({
              self.employee = res[0];
              check_sign_in_status = res[0].attendance_state;
              self.$el.html(QWeb.render("attendance.attendance_button_main_template", {widget: self}));
+             self.$el.css('display','inline-block')
              
              //set_login_time
              self._rpc({
@@ -87,7 +88,7 @@ var attend_btn = Widget.extend({
     },
     default_tooltip : function(){
     	
-    	$('.attendance_btn_li').attr({
+    	$('.attendance_btn_li').parent().attr({
        		 'data-toggle':'tooltip',
        		 'data-original-title': 'Click To sign in',
        		 'delay':'0'
@@ -150,9 +151,7 @@ var attend_btn = Widget.extend({
     		//get_current_hour
         	var get_curr_date = moment(new Date()).format('DD/MM/YY,HH:mm:ss').split(",");
         	curr_hour_arr = get_curr_date[1].split(":").map(Number);
-        	
-        	console.log(curr_hour_arr)
-        	
+        	        	
         	if(login_time_arr == false){
         		this.default_tooltip();
         	}else{
@@ -197,7 +196,7 @@ var attend_btn = Widget.extend({
     	    	//set_current_tooltip_details
     	    	tooltip_details = "Last sign in : "+ login_time_arr +"</br>"+ timing_status +"</br>"+ attend_status +"";
     	    	
-    	       	$('.attendance_btn_li').attr({
+    	       	$('.attendance_btn_li').parent().attr({
     	       		'data-toggle':'tooltip',
     	       		'data-original-title': tooltip_details,
     	       		'delay':'0'
