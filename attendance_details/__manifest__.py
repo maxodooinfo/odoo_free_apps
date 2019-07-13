@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Attendance',
+    'name': 'Attendance Details',
     'version': '1.0',
     'category': 'Human Resources',
     'sequence': 1,      

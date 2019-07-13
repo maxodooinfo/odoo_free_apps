@@ -3,8 +3,8 @@
     <data>
         <template id="attendance_assets_backend" inherit_id="web.assets_backend" name="Attendance Button Assets Backend">
               <xpath expr= "." position="inside">
-				<link rel="stylesheet" href="/attendance/static/src/less/attend_btn.less" type="text/less"/>
-				<script type="text/javascript" src="/attendance/static/src/js/attendance.js"></script>
+				<link rel="stylesheet" href="/attendance_details/static/src/less/attend_btn.less" type="text/less"/>
+				<script type="text/javascript" src="/attendance_details/static/src/js/attendance.js"></script>
               </xpath>
         </template>
     </data>

@@ -2,7 +2,7 @@
 <templates xml:space="preserve">
 	
 	<!-- Attendance Button Template -->
-	<t t-name="attendance.attendance_button_main_template">
+	<t t-name="attendance_details.attendance_button_main_template">
 		 <li class="attendance_btn_li">
             <div class="sign_in_out_btn_div_wrap">
                 <t t-if="widget.employee">

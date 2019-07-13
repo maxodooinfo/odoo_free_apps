@@ -1,4 +1,4 @@
-odoo.define('attendance.attendance_button', function (require) {
+odoo.define('attendance_details.attendance_button', function (require) {
 "use strict";
 
 var SystrayMenu = require('web.SystrayMenu');
@@ -18,7 +18,7 @@ var timing_status;
 var tooltip_details;
 var check_sign_in_status;
 
-QWeb.add_template('/attendance/static/src/xml/attendance.xml');
+QWeb.add_template('/attendance_details/static/src/xml/attendance.xml');
 
 var attend_btn = Widget.extend({
 	
@@ -50,7 +50,7 @@ var attend_btn = Widget.extend({
              }
              self.employee = res[0];
              check_sign_in_status = res[0].attendance_state;
-             self.$el.html(QWeb.render("attendance.attendance_button_main_template", {widget: self}));
+             self.$el.html(QWeb.render("attendance_details.attendance_button_main_template", {widget: self}));
              self.$el.css('display','inline-block')
              
              //set_login_time
@@ -127,7 +127,7 @@ var attend_btn = Widget.extend({
 	        	}else{
 	        		self.employee.attendance_state = 'checked_in'
 	        	}
-            	self.$el.html(QWeb.render("attendance.attendance_button_main_template", {widget: self}));
+            	self.$el.html(QWeb.render("attendance_details.attendance_button_main_template", {widget: self}));
             	
             	self.tooltip_show();
             	
