@@ -6,6 +6,7 @@
     'sequence': 1,      
     'summary': 'Show attendance details on button hover.',
     'author': 'max',
+    'website': '',
     'depends': ['hr_attendance'],
     'data': [
         'views/assets.xml'
